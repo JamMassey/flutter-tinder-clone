@@ -2,7 +2,7 @@
 
 1. Download Flutter .zip by clicking here - https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.0.4-stable.zip
 
-2. Unzip and place flutter file under root directory e.g C:\flutter
+2. Unzip and place flutter file under root directory e.g C:\flutter (You can add it anywhere, but don't add it to somewhere that requires permissions like Program Files)
 
 3. Add 'C:\flutter\bin' to path.
 
