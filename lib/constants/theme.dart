@@ -2,10 +2,6 @@
 /// your class of custom colors, in this case `CompanyColors` and then create a `ThemeData`
 /// object with those colors you just defined.
 ///
-/// Resource:
-/// A good resource would be this website: http://mcg.mbitson.com/
-/// You simply need to put in the colour you wish to use, and it will generate all shades
-/// for you. Your primary colour will be the `500` value.
 ///
 /// Colour Creation:
 /// In order to create the custom colours you need to create a `Map<int, Color>` object
@@ -13,7 +9,7 @@
 /// the colours. The six character hex code is what follows. If you wanted the colour
 /// #114488 or #D39090 as primary colours in your theme, then you would have
 /// `const Color(0x114488)` and `const Color(0xD39090)`, respectively.
-///
+/// To convert Color to MAterialColour, you can use the function in the utils library.
 /// Usage:
 /// In order to use this newly created theme or even the colours in it, you would just
 /// `import` this file in your project, anywhere you needed it.
@@ -30,8 +26,7 @@ class AppThemeData {
   static final Color _lightFocusColor = Colors.black.withOpacity(0.12);
   static final Color _darkFocusColor = Colors.white.withOpacity(0.12);
 
-  static ThemeData lightThemeData =
-      themeData(lightColorScheme, _lightFocusColor);
+  static ThemeData lightThemeData = themeData(lightColorScheme, _lightFocusColor);
   static ThemeData darkThemeData = themeData(darkColorScheme, _darkFocusColor);
 
   static ThemeData themeData(ColorScheme colorScheme, Color focusColor) {
@@ -56,7 +51,7 @@ class AppThemeData {
           _lightFillColor.withOpacity(0.80),
           _darkFillColor,
         ),
-        contentTextStyle: _textTheme.subtitle1!.apply(color: _darkFillColor),
+        contentTextStyle: FontFamily.textTheme.subtitle1!.apply(color: _darkFillColor),
       ),
     );
   }
@@ -85,7 +80,6 @@ class AppThemeData {
     background: Color(0xFF241E30),
     surface: Color(0xFF1F1929),
     onBackground: Color(0x0DFFFFFF),
-    // White with 0.05 opacity
     error: _darkFillColor,
     onError: _darkFillColor,
     onPrimary: _darkFillColor,
