@@ -7,7 +7,7 @@ MaterialColor getMaterialColor(Color color) { //little addition
 }
 Map<int, Color> getSwatch(Color color) {
   final hslColor = HSLColor.fromColor(color);
-  final lightness = hslColor.lightness;
+  final lightness = HSLColor.fromColor(color).lightness;
   /// if [500] is the default color, there are at LEAST five
   /// steps below [500]. (i.e. 400, 300, 200, 100, 50.) A
   /// divisor of 5 would mean [50] is a lightness of 1.0 or

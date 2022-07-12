@@ -1,5 +1,5 @@
 class Strings {
-  Strings._();
+  Strings._(); //dunno what this does
 
   //General
   static const String appName = "flutter-dating";
