@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants/theme.dart';
+import 'ui/demo_page.dart';
 import 'ui/home_page.dart';
 
 void main() {
@@ -12,9 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: "Dating App",
       theme: AppThemeData.darkThemeData, //Configurable via constants/theme.dart
-      home: const HomePage(title: 'Flutter Demo Home Page'),
+      home: const HomePage(title: 'Home Page'), //Swap out with demo page
     );
   }
 }

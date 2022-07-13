@@ -15,7 +15,7 @@ class Button extends StatelessWidget {
         child: ElevatedButton (
           onPressed: callback,
           child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 13),
+              padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 12),
               child: Text(
                 text,
                 style: const TextStyle(fontWeight: FontWeight.bold),
