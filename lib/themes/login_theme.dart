@@ -12,22 +12,20 @@ class LoginDesignTheme {
 
   static ThemeData themeData(ColorScheme colorScheme, Color focusColor) {
     return ThemeData(
-      colorScheme: colorScheme,
       textTheme: _textTheme,
       iconTheme: IconThemeData(color: AppColors.white),
       canvasColor: colorScheme.background,
       scaffoldBackgroundColor: colorScheme.background,
       highlightColor: Colors.transparent,
-      accentColor: colorScheme.primary,
-      focusColor: AppColors.primaryColor,
+      focusColor: AppColors.primaryColor, colorScheme: colorScheme.copyWith(secondary: colorScheme.primary),
     );
   }
 
   static const ColorScheme lightColorScheme = ColorScheme(
     primary: Color(0xFFC2366D),
-    primaryVariant: Color(0xFF117378),
+    primaryContainer : Color(0xFF117378),
     secondary: Color(0xFFEFF3F3),
-    secondaryVariant: Color(0xFFFAFBFB),
+    secondaryContainer : Color(0xFFFAFBFB),
     background: Color(0xFFFFFFFF),
     surface: Color(0xFFFAFBFB),
     onBackground: Colors.white,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dating/widgets/swiping_card_deck.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
+  HomePage();
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -13,7 +13,6 @@ class HomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
 
   @override
   State<HomePage> createState() => _HomePageState();

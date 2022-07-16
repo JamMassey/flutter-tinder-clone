@@ -1,17 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dating/bloc/theme_bloc.dart';
-import 'package:flutter_dating/themes/login_theme.dart';
 import 'package:flutter_dating/values/values.dart';
 import 'package:flutter_dating/widgets/custom_button.dart';
 import 'package:flutter_dating/widgets/custom_divider.dart';
 import 'package:flutter_dating/widgets/custom_text_form_field.dart';
 import 'package:flutter_dating/widgets/spaces.dart';
+import 'package:flutter_dating/routes/router.gr.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({required this.themeBloc});
+  LoginScreen();
 
-  ThemeBloc themeBloc;
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -20,12 +18,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-    widget.themeBloc.selectedTheme.add(_buildLightTheme());
   }
 
-  CurrentTheme _buildLightTheme() {
-    return CurrentTheme('light', LoginDesignTheme.lightThemeData);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 InkWell(
                   onTap: () =>
-                      ExtendedNavigator.root.push(Routes.signUpScreen),
+                      context.router.push(SignUpScreenRoute()),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -136,7 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
           title: StringConst.SIGN_IN,
           textStyle: textTheme.headline4?.copyWith(color: AppColors.white),
           color: AppColors.pinkShade2,
-          onPressed: () {},
+          onPressed:()=> context.router.push(HomePageRoute()),
         ),
         SpaceH16(),
         _buildSeparator(),
@@ -146,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
           textStyle: textTheme.headline4,
           hasIcon: true,
           color: AppColors.white,
-          onPressed: () {},
+          onPressed: ()=> context.router.push(HomePageRoute()),
           // icon: Image.asset(
           //   ImagePath.GOOGLE_LOGO,
           //   height: Sizes.HEIGHT_25,
