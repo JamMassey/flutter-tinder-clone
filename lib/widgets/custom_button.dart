@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
     return MaterialButton(
       onPressed: onPressed,
       elevation: elevation,
-      minWidth: MediaQuery.of(context).size.width,
+      minWidth: MediaQuery.of(context).size.width, //maybe comment out
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(borderRadius),
         side: borderSide,

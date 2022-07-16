@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dating/bloc/theme_bloc.dart';
 import 'package:flutter_dating/routes/router.dart';
-import 'package:flutter_dating/routes/router.gr.dart';
 import 'package:flutter_dating/themes/login_theme.dart';
 import 'package:flutter_dating/values/values.dart';
 import 'package:flutter_dating/widgets/custom_button.dart';
