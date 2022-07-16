@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dating/widgets/button.dart';
 
 
-class IncrementCounter extends StatefulWidget {
-  const IncrementCounter({Key? key, required this.title}) : super(key: key);
+class DemoPage extends StatefulWidget {
+  const DemoPage({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -16,10 +17,10 @@ class IncrementCounter extends StatefulWidget {
   final String title;
 
   @override
-  State<IncrementCounter> createState() => _IncrementCounterState();
+  State<DemoPage> createState() => _DemoPageState();
 }
 
-class _IncrementCounterState extends State<IncrementCounter> {
+class _DemoPageState extends State<DemoPage> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -77,11 +78,9 @@ class _IncrementCounterState extends State<IncrementCounter> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButton: Button('Increment', ()=>_incrementCounter()) //If this is throwing an error, it shouldnt be
+      
+// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
